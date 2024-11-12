@@ -1,18 +1,23 @@
-package com.example.calculadora_android.negocio
+class GestorCalculadora private constructor() {
 
-class GestorCalculadora {
+    companion object {
+        private var instance: GestorCalculadora? = null
 
-    fun hacerOperacion (num1 : Double, num2 : Double , operationToDo : Int) : Double {
-        var result : Double = when (operationToDo){
-            1 -> Math.pow(num1, num2)
-            2 ->  (num1 *num2) / 100
-            3 -> if (num2 > 0 ) num1 / num2 else 0.0
-            4 -> num1 * num2
-            5 -> num1 - num2
-            6 -> num1 + num2
-            else -> {0.0}
+        fun getInstance(): GestorCalculadora {
+            if (instance == null) {
+                instance = GestorCalculadora()
+            }
+            return instance!!
         }
+    }
 
-        return result
+    fun hacerOperacion(num1: Double, num2: Double, operation: Int): Double {
+        return when (operation) {
+            1 -> num1 + num2
+            2 -> num1 - num2
+            3 -> num1 * num2
+            4 -> if (num2 != 0.0) num1 / num2 else 0.0
+            else -> 0.0
+        }
     }
 }

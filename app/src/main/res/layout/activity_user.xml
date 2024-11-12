@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_negro"
+    tools:context=".UserActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:text="INTRODUCE TU USUARIO :  "
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="66dp"
+        android:layout_marginTop="16dp"
+        android:text="CALCULADORA"
+
+        android:textAlignment="center"
+        android:textColor="#FF8C00"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonAccept"
+        android:layout_width="190dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="96dp"
+        android:backgroundTint="#FF8C00"
+        android:text="ACEPTAR"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextUser"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/editTextUser"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUser" />
+
+    <EditText
+        android:id="@+id/editTextUser"
+        android:layout_width="309dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="92dp"
+        android:hint="Usuario"
+        android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textColorHint="#B0BEC5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
